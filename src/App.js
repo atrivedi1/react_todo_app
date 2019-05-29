@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
-import './App.css'
 
-export default class App extends Component {
+import './App.css'
+import AppContainer from './components/app_container.js'
+
+export default class App extends Component {  
   render() {
-    return null
+    return (
+      <div>
+        <AppContainer />
+      </div>
+    )
   }
 }

@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.Main_View {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.Section {
+   padding: 10px;
+   color: #4a4a4a;
+   border-bottom: 1px solid #e1e1e1;
+   margin-bottom: 0px;
+   padding: 20px;
+   font-weight: 200;
+  }
+
+.Group_Title {
+  color: #4a4a4a;
+  position: relative;
+  margin-bottom: 1px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.Group_Status {
+  color: #cecccc;
+  font-weight: 200;
+  margin-top: 1px;
+  padding-left: 60px;
+}
+
+.Group_Image {
+  vertical-align: middle;
+  padding-right: 50px;
+  padding-top: 15px;
+  width: 10px;
+}
+
+.Overview_Link {
+  float: right;
+  padding-top: 27px;
+  vertical-align: middle;
+  text-decoration:  none;
+  font-size: 14px;
+}
+
+.Completed_Task {
+  display: inline-block;
+  text-decoration: line-through; 
+  font-size: 16px;
+}
+
+.Incomplete_Task {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.Locked_Task {
+  display: inline-block;
+  color: #cecccc;
+  font-size: 16px;
+}
+
+.Task_Image {
+  padding-right: 50px;
+  width: 15px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
