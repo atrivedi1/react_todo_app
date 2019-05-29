@@ -16,6 +16,7 @@ body {
    font-weight: 200;
   }
 
+
 .Group_Title {
   color: #4a4a4a;
   position: relative;
@@ -36,6 +37,10 @@ body {
   padding-right: 50px;
   padding-top: 15px;
   width: 10px;
+}
+
+.Task_Image:hover, .Group_Image:hover {
+    cursor: pointer;
 }
 
 .Overview_Link {
