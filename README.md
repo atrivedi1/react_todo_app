@@ -1,18 +1,5 @@
 # Wonderschool Coding Challenge
 
-## Introduction
-
-Thanks for your interest in joining the Wonderschool engineering team! Before we proceed with more
-formal interviews, we ask that all candidates submit a coding challenge. The coding challenge is
-a foundational piece of our process and it's referenced later in our process during the technical 
-interviews.
-
-For an experienced web developer, the coding challenge should not take longer than **2-3 hours** to 
-complete.
-
-If at any point you have questions concerning the coding challenge and/or interview process, please
-do not hesitate to email engineering@wonderschool.com.
-
 ## Coding Challenge
 
 The coding challenge revolves around building a task list. Tasks belong to groups and can have
