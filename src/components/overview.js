@@ -1,6 +1,5 @@
 import React from 'react'
-
-import Group from './group.js'
+import Group from './Group.js'
 
 function renderGroups(props, groups) {
   return Object.keys(groups).map((groupName, i) => {
@@ -10,7 +9,7 @@ function renderGroups(props, groups) {
       groupName={groupName}
       selectGroup={props.selectedGroup}
       key={i}
-    />
+    /> 
   })
 }
 

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Completed from '../assets/completed.svg'
 import Incomplete from '../assets/incomplete.svg'
 import Locked from '../assets/locked.svg'
@@ -14,11 +13,21 @@ function determineImage(props) {
   }
 }
 
+function determineTaskType(props) {
+  if (props.isLocked) {
+    return "Locked_Task"
+  } else if (props.isComplete) {
+    return "Completed_Task"
+  } else {
+    return "Incomplete_Task"
+  }
+}
+
 function handleClick(props) {
   let taskId = props.taskInfo.id;
 
-  if (props.isLocked === false && props.isComplete === false) {
-    if (!props.dependentTasksCompleted) {
+  if (!props.isLocked && !props.isComplete) {
+    if (!props.dependenciesCompleted) {
       return console.log("dependent tasks not completed")
     } else {
       console.log(`task ${taskId} completed`)
@@ -27,23 +36,13 @@ function handleClick(props) {
     }
   }
 
-  else if (props.isLocked === false && props.isComplete === true) {
+  else if (!props.isLocked && props.isComplete) {
     console.log(`marking task ${taskId} as incomplete`);
     return props.markIncomplete(taskId)
   }
 
   else if (props.isLocked === true) {
     console.log("must complete dependencies to unlock")
-  }
-}
-
-function determineTaskType(props) {
-  if(props.isLocked) {
-    return "Locked_Task"
-  } else if(props.isComplete) {
-    return "Completed_Task"
-  } else {
-    return "Incomplete_Task"
   }
 }
 

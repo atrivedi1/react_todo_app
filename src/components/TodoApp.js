@@ -1,17 +1,18 @@
 import React from 'react'
-
 import task_data from "../data.json";
-import Overview from './overview.js'
-import Details from './group_details.js'
+import Overview from './Overview.js'
+import Details from './GroupDetails.js'
 
-
-class AppContainer extends React.Component {
+export default class TodoApp extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      //task objects by group
       groups: this.groupInitialTasksByGroup(task_data),
+      //task objects by id
       allTasks: this.hashTasks(task_data),
+      //dependents task id to array of task ids
       dependents: this.findDependents(task_data),
       selectedGroup: null
     };
@@ -108,7 +109,7 @@ class AppContainer extends React.Component {
   }
 
   markDependentsAsIncomplete(id) {
-    if (!this.state.dependents.hasOwnProperty(id) || this.state.dependents[id] === []) {
+    if (!this.state.dependents.hasOwnProperty(id) || this.state.dependents[id].length === 0) {
       return;
     }
 
@@ -137,11 +138,8 @@ class AppContainer extends React.Component {
   renderOverviewOrDetailView() {
     if(this.state.selectedGroup === null) {
       return <Overview
-              allTasks={this.state.allTasks}
               groups={this.state.groups}
               selectedGroup={this.selectedGroup}
-              taskCompleted={this.taskMarkedAsComplete}
-              taskIncompleted={this.taskMarkedAsIncomplete}
             />
     } else {
       return <Details
@@ -163,5 +161,3 @@ class AppContainer extends React.Component {
     );
   }
 }
-
-export default AppContainer

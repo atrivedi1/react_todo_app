@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-
 import './App.css'
-import AppContainer from './components/app_container.js'
+import TodoApp from './components/TodoApp.js'
 
 export default class App extends Component {  
   render() {
     return (
       <div>
-        <AppContainer />
+        <TodoApp />
       </div>
     )
   }
