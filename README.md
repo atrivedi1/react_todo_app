@@ -1,4 +1,4 @@
-# Wonderschool Coding Challenge
+#Sample React Todo App
 
 ## Coding Challenge
 
